@@ -3,13 +3,18 @@ package com.applecompose.plantdiary.v32001
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.height
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
+import com.applecompose.plantdiary.v32001.presentation.screens.HomeScreen
 import com.applecompose.plantdiary.v32001.ui.theme.PlantDiaryTheme
 
 class MainActivity : ComponentActivity() {
@@ -31,7 +36,12 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun Greeting(name: String) {
-	Text(text = "Hello $name!")
+	Column() {
+		Text(text = "Hello $name!")
+		Spacer(modifier = Modifier.height(16.dp))
+		HomeScreen()
+	}
+
 }
 
 @Preview(showBackground = true)
